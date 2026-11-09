@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoLoop | Turning Leftovers Into Leverages - Circular Economy B2B Marketplace</title>
+  <meta name="description" content="EcoLoop is a circular-economy B2B marketplace where businesses list unused materials, waste, recyclable resources, and packaging, powered by AI matching and green logistics.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♺</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#0F382A',
+              dark: '#09231A',
+              light: '#166534'
+            },
+            mint: {
+              DEFAULT: '#DCFCE7',
+              soft: '#F0FDF4'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Map CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+  <!-- Top Navigation Header Container -->
+  <div id="nav-container"></div>
+
+  <!-- Dynamic Views Mount Point -->
+  <main id="app-root" class="flex-1 pb-20 lg:pb-0"></main>
+
+  <!-- Toast Notifications Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 max-w-md w-full px-4 pointer-events-none"></div>
+
+  <!-- Mobile Bottom Navigation Bar (Visible on mobile/tablet) -->
+  <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0F382A] text-white border-t border-emerald-900/60 z-40 px-3 py-2 flex items-center justify-around text-[10px] font-semibold shadow-lg">
+    <a href="#marketplace" class="flex flex-col items-center gap-1 text-emerald-200 hover:text-white">
+      <span class="text-base">🛍️</span>
+      <span>Market</span>
+    </a>
+    <a href="#list-waste" class="flex flex-col items-center gap-1 text-emerald-200 hover:text-white">
+      <span class="text-base">➕</span>
+      <span>List</span>
+    </a>
+    <a href="#orders" class="flex flex-col items-center gap-1 text-emerald-200 hover:text-white">
+      <span class="text-base">📦</span>
+      <span>Orders</span>
+    </a>
+    <a href="#impact" class="flex flex-col items-center gap-1 text-emerald-200 hover:text-white">
+      <span class="text-base">🌱</span>
+      <span>Impact</span>
+    </a>
+    <a href="#privacy-center" class="flex flex-col items-center gap-1 text-emerald-200 hover:text-white">
+      <span class="text-base">🔒</span>
+      <span>Privacy</span>
+    </a>
+  </nav>
+
+  <!-- App Bootstrap Module -->
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
